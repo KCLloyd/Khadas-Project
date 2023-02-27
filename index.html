@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>KVM Page</title>
+  </head>
+
+  <h1><center> Title of the Page </center></h1>
+
+  <!--Holding place for the streaming video-->
+  <src> </src>
+
+  <style>
+    .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <div class="btn-group">
+    <div class="center">
+      <!--List of commands for user-->
+      <h3><center>Command List</center></h3>
+      <!--Turn on-->
+      <button id="on">Turn on KVM</button>
+      <!--Turn off-->
+      <button id="off">Turn off KVM</button>
+      <!--Take mouse-->
+      <button id="mouse">Take Mouse</button>
+      <!--Take keyboard-->
+      <button id="keyboard">Take Keyboard</button>  
+    </div>
+  </div>
+
+  <body>
+    <script src="Senior_Project/kvmPage.js"></script>
+  </body>
+</html>
