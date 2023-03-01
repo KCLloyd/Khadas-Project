@@ -5,11 +5,6 @@
     <title>KVM Page</title>
   </head>
 
-  <h1><center> Title of the Page </center></h1>
-
-  <!--Holding place for the streaming video-->
-  <src> </src>
-
   <style>
     .center {
     margin: 0;
@@ -21,20 +16,60 @@
     }
   </style>
 
+  <!--Bootstrap CSS--> 
+  <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css” integrity=”sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO” crossorigin=”anonymous”> 
+  <h1><center> Title of the Page </center></h1>
+
+  <!--Holding place for the streaming video-->
+  <div class=”container”> 
+    <div class=”row”> 
+        <div class=”col-lg-8 offset-lg2”> 
+                <img src=”{{ url_for(“video_feed”) }}” width=”100%”> 
+        </div> 
+    </div> 
+  </div> 
+
+  <script>
+    function enterIP() {
+      let ipAddress = prompt("Please enter an IP:", "0.0.0.0");
+    }
+  </script>
+
+  <script>
+    function KVM_on() {
+  }
+  </script>
+
+  <script>
+    function KVM_off() {
+  }
+  </script>
+
+  <script>
+    function mouse() {
+  }
+  </script>
+
+  <script>
+    function keyboard() {
+  }
+  </script>
+
   <div class="btn-group">
     <div class="center">
       <!--List of commands for user-->
       <h3><center>Command List</center></h3>
+      <!--Enter IP Address-->
+      <button onclick="enterIP()">Enter IP Address</button>
       <!--Turn on-->
-      <button id="on">Turn on KVM</button>
+      <button onclick="KVM_on()">Turn on KVM</button>
       <!--Turn off-->
-      <button id="off">Turn off KVM</button>
+      <button onclick="KVM_off()">Turn off KVM</button>
       <!--Take mouse-->
-      <button id="mouse">Take Mouse</button>
+      <button onclick="mouse()">Take Mouse</button>
       <!--Take keyboard-->
-      <button id="keyboard">Take Keyboard</button>  
+      <button onclick="keyboard()">Take Keyboard</button>  
     </div>
-  </div>
 
   <body>
     <script src="Senior_Project/kvmPage.js"></script>
